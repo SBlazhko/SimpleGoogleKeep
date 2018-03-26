@@ -1,0 +1,83 @@
+# require: rubocop-rspec
+
+AllCops:
+  DisplayCopNames: true
+  StyleGuideCopsOnly: false
+  TargetRubyVersion: 2.3
+  Exclude:
+    - db/**/*
+    - script/**/*
+    - bin/**/*
+    - vendor/**/*
+    - tmp/**/*
+    - spec/fixtures/**/*
+    - config/**/*
+    - ./Gemfile
+    - ./Rakefile
+    - ./config.ru
+    - spec/spec_helper.rb
+    - spec/rails_helper.rb
+
+Rails:
+  Enabled: true
+
+Rails/Delegate:
+  Enabled: false
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundMethodBody:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Naming/AccessorMethodName:
+  Enabled: false
+
+Style/TrivialAccessors:
+  AllowPredicates: true
+  Whitelist:
+    - "*?"
+
+Style/BlockDelimiters:
+  Exclude:
+    - spec/**/*
+
+Layout/MultilineBlockLayout:
+  Exclude:
+    - spec/**/*
+
+Layout/IndentHash:
+  Exclude:
+    - spec/**/*
+
+Layout/EndOfLine:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Documentation:
+  Enabled: true
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+    - lib/tasks/**/*
